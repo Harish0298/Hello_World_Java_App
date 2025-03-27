@@ -32,14 +32,7 @@ jobs:
       - name: Build Docker Image
         run: docker build -t hello-world-java:latest .
 
-      # Step 5: Save Docker image to a tar file (optional step)
-      - name: Save Docker image to a tar file
-        run: docker save hello-world-java:latest -o hello-world-java.tar
-
-      # Step 6: Upload Docker image as artifact
-      - name: Upload Docker image as artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: docker-image
-          path: hello-world-java.tar
+      # Step 5: Save Docker image to a local folder
+      - name: Save Docker image to local folder
+        run: docker save hello-world-java:latest > hello-world-java.tar
 
