@@ -36,3 +36,7 @@ jobs:
       - name: Save Docker image to local folder
         run: docker save hello-world-java:latest > hello-world-java.tar
 
+      # Step 6: List files in the workspace
+      - name: List files in the workspace
+        run: ls -alh
+
