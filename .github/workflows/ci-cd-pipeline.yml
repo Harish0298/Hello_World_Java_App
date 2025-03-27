@@ -38,7 +38,7 @@ jobs:
 
       # Step 6: Upload Docker image as artifact
       - name: Upload Docker image as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: docker-image
           path: hello-world-java.tar
